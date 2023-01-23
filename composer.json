@@ -1,0 +1,20 @@
+{
+    "name": "brasero/reb",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brasero",
+            "email": "brandonricci4@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/psr7": "^2.4",
+        "http-interop/response-sender": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/"
+        }
+    }
+}
