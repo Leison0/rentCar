@@ -7,11 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
 {
     public static $files = array (
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6f2c5977e422114bbaec553e7c77ee8b' => __DIR__ . '/..' . '/http-interop/response-sender/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\Expressive\\Router\\' => 23,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -20,6 +25,11 @@ class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
         array (
             'GuzzleHttp\\Psr7\\' => 16,
         ),
+        'F' => 
+        array (
+            'Fig\\Http\\Message\\' => 17,
+            'FastRoute\\' => 10,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
@@ -27,6 +37,11 @@ class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\Expressive\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-expressive-router/src',
+            1 => __DIR__ . '/..' . '/zendframework/zend-expressive-fastroute/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -35,6 +50,14 @@ class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
         'Core\\' => 
         array (

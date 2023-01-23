@@ -4,6 +4,10 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/http-interop/response-sender" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-expressive-fastroute" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-expressive-router" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fig/http-message-util" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/fast-route" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

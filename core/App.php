@@ -18,10 +18,10 @@ class App
                 ->withHeader('Location', substr($uri, 0, -1));
         }
 
-        $render = new PHPRenderer();
-        $renderer->addPath() // ajouter des chemins
-        $renderer->render('@blog/show', ['title' => $title]);
-
-        return new Response(200,[], $uri);
+        $renderer = new PHPRenderer();
+        $renderer->addGlobal('siteName', 'Mon site global');
+        $renderer->addPath('home', '../App/Home/view');
+        $response = $renderer->render('@home/index');
+        return new Response(200,[], $response);
     }
 }
