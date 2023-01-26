@@ -1,14 +1,24 @@
 <?php
 namespace Core;
 
-use Core\Framework\Renderer\PHPRenderer;
+use Exception;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Psr7\Response;
+use Core\Framework\Router\Router;
 
 class App
 {
+    private Router $router;
+    private array $modules;
+    public function __construct(array $modules = [], array $dependencies = [])
+    {
+        $this->router = new Router();
 
+        foreach ($modules as $module) {
+            $this->modules[] = new $module($this->router, $dependencies['renderer']);
+        }
+    }
 
     public function run(ServerRequestInterface $request): ResponseInterface {
         $uri = $request->getUri()->getPath();
@@ -18,10 +28,20 @@ class App
                 ->withHeader('Location', substr($uri, 0, -1));
         }
 
-        $renderer = new PHPRenderer();
-        $renderer->addGlobal('siteName', 'Mon site global');
-        $renderer->addPath('home', '../App/Home/view');
-        $response = $renderer->render('@home/index');
-        return new Response(200,[], $response);
+        $route = $this->router->match($request);
+
+        if (is_null($route)) {
+            return new Response(404, [], "<h2>Cette page n'existe pas</h2>");
+        }
+
+        $response = call_user_func_array($route->getCallback(), [$request]);
+
+        if ($response instanceof ResponseInterface) {
+            return $response;
+        } elseif (is_string($response)) {
+            return new Response(200,[], $response);
+        } else {
+            throw new Exception("Réponse du server invalide");
+        }
     }
 }

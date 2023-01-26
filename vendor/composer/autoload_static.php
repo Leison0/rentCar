@@ -34,13 +34,17 @@ class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
         array (
             'Core\\' => 5,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Zend\\Expressive\\Router\\' => 
         array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-expressive-router/src',
-            1 => __DIR__ . '/..' . '/zendframework/zend-expressive-fastroute/src',
+            0 => __DIR__ . '/..' . '/zendframework/zend-expressive-fastroute/src',
+            1 => __DIR__ . '/..' . '/zendframework/zend-expressive-router/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -62,6 +66,10 @@ class ComposerStaticInit6e1119416ebc695fe2a68dab23b0357a
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/App',
         ),
     );
 
