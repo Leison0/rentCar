@@ -3,7 +3,7 @@
         'name' => 'brasero/reb',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '0410e1a37c55691576a0b192f0612b19b5f4ba25',
+        'reference' => 'a4c7cd7612e0ffec9fcf5bc2656472677023afc6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'brasero/reb' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '0410e1a37c55691576a0b192f0612b19b5f4ba25',
+            'reference' => 'a4c7cd7612e0ffec9fcf5bc2656472677023afc6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
